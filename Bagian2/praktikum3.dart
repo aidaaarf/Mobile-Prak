@@ -1,10 +1,12 @@
-// Ketik atau salin kode program berikut ke dalam fungsi main()
-for (Index = 10; index < 27; index) {
-  print(Index);
+// Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+
+void main() {
+  for (int index = 10; index < 27; index++) {
+    if (index == 21) {
+      break;
+    } else if (index > 1 && index < 7) {
+      continue;
+    }
+    print(index);
+  }
 }
-
-// Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
-
-// Terjadi error saat dieksekusi (run) karena variabel index tidak dideklarasikan, dart merupakan 
-// case-sensitive sehingga penulisan harus konsisten (menggunakan huruf kecil), update counter 
-// salah seharusnya index++
