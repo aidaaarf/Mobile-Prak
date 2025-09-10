@@ -1,10 +1,15 @@
-// Ketik atau salin kode program berikut ke dalam fungsi main().
-while (counter < 33) {
-  print(counter);
-  counter++;
+// Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+
+void main() {
+  int counter = 0;
+
+  while (counter < 33) {
+    print(counter);
+    counter++;
+
+    do {
+      print(counter);
+      counter++;
+    } while (counter < 77);
+  }
 }
-
-// Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
-
-// Terjadi error saat dieksekusi (run) karena variabel counter belum dideklarasikan sebelum 
-// dipakai di while. Sehingga harus diinisialisasi terlebih dahulu 
