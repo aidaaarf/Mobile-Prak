@@ -29,4 +29,12 @@ void main() {
   promoActive = false;
   nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
   print("promoActive = false -> $nav");
+
+  var login = 'Manager';
+  var nav2 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
+  print("login = Manager -> $nav2");
+
+  login = 'Admin';
+  nav2 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
+  print("login = Admin -> $nav2");
 }
