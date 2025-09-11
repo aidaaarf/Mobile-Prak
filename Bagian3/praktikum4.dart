@@ -19,4 +19,14 @@ void main() {
 
   print(nimList); 
   print(fullList);  
+
+    // Jika promoActive = true
+  var promoActive = true;
+  var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
+  print("promoActive = true -> $nav");
+
+  // Jika promoActive = false
+  promoActive = false;
+  nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
+  print("promoActive = false -> $nav");
 }
