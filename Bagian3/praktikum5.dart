@@ -18,4 +18,11 @@ void main() {
   print("\nData Mahasiswa: $mahasiswa");
   print("Nama : ${mahasiswa.$1}");
   print("NIM  : ${mahasiswa.$2}");
+
+  var mahasiswa2 = ('Aida Rahma', 2341720094, a: true, b: 'Mahasiswi');
+
+  print(mahasiswa2.$1); 
+  print(mahasiswa2.$2);
+  print(mahasiswa2.a);   
+  print(mahasiswa2.b);  
 }
