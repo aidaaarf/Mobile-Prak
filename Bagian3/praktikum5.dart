@@ -1,5 +1,7 @@
 void main() {
-  (String, String, {int a, bool b}) tukar((String, String, {int a, bool b}) record) {
+  (String, String, {int a, bool b}) tukar(
+    (String, String, {int a, bool b}) record,
+  ) {
     var (x, y, :a, :b) = record;
     return (y, x, a: a, b: b);
   }
@@ -9,6 +11,11 @@ void main() {
 
   var hasil = tukar(record);
   print("Sesudah tukar: $hasil");
+
+  //mahasiswa
+  (String, int) mahasiswa = ('Aida Rahma', 2341720094);
+
+  print("\nData Mahasiswa: $mahasiswa");
+  print("Nama : ${mahasiswa.$1}");
+  print("NIM  : ${mahasiswa.$2}");
 }
-
-
