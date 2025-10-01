@@ -16,30 +16,33 @@ class MyApp extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: const Text(
-                  'Wisata Gunung di Batu',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
+                  'Wisata Pantai di Malang',
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
               const Text(
-                'Batu, Malang, Indonesia',
-                style: TextStyle(
-                  color: Colors.grey,
-                ),
+                'Malang, Jawa Timur, Indonesia',
+                style: TextStyle(color: Colors.grey),
               ),
             ],
           ),
         ),
-        Icon(
-          Icons.star,
-          color: Colors.red[500],
-        ),
+        Icon(Icons.star, color: Colors.red[500]),
         const Text('41'),
       ],
     ),
   );
 
+    Widget get textSection => Container(
+    padding: const EdgeInsets.all(32),
+    child: const Text(
+      'Pantai Teluk Asmara - Jawa Timur '
+      'dikenal sebagai surganya wisata alam di Indonesia. '
+      'Pantai yang mendapat julukan Raja Ampat-nya Malang. '
+      'Aida Rahma Fadhila - 2341720094 ',
+      softWrap: true,
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -58,21 +61,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter layout: Aida Rahma Fadhila 234172009',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter layout demo'),
-        ),
-        body: Column(
-          children: [
-            titleSection,
-            buttonSection, 
-          ],
-        ),
+        appBar: AppBar(title: const Text('Flutter layout demo')),
+        body: Column(children: [titleSection, buttonSection, textSection]),
       ),
     );
   }
 
-
-  // --- Method _buildButtonColumn 
+  // --- Method _buildButtonColumn
   Column _buildButtonColumn(Color color, IconData icon, String label) {
     return Column(
       mainAxisSize: MainAxisSize.min,
