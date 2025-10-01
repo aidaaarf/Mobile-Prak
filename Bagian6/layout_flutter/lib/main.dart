@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
     ),
   );
 
-    Widget get textSection => Container(
+  Widget get textSection => Container(
     padding: const EdgeInsets.all(32),
     child: const Text(
       'Pantai Teluk Asmara - Jawa Timur '
@@ -58,11 +58,20 @@ class MyApp extends StatelessWidget {
       ],
     );
 
+    Widget imageSection = Image.asset(
+      'images/pantai.jpg', // Pastikan aset ini ada dan terdaftar di pubspec.yaml
+      width: 600,
+      height: 240,
+      fit: BoxFit.cover,
+    );
+
     return MaterialApp(
       title: 'Flutter layout: Aida Rahma Fadhila 234172009',
       home: Scaffold(
         appBar: AppBar(title: const Text('Flutter layout demo')),
-        body: Column(children: [titleSection, buttonSection, textSection]),
+        body: Column(
+          children: [imageSection, titleSection, buttonSection, textSection],
+        ),
       ),
     );
   }
