@@ -4,21 +4,17 @@ void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
+
   Widget get titleSection => Container(
-    // soal 3: Seluruh baris ada di dalam Container dan beri padding di sepanjang setiap tepinya sebesar 32 piksel.
     padding: const EdgeInsets.all(32.0),
     child: Row(
       children: [
         Expanded(
-          /* soal 1: Letakkan widget Column di dalam widget Expanded */
           child: Column(
-            // soal 1: Tambahkan properti crossAxisAlignment ke CrossAxisAlignment.start
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /* soal 2: Letakkan baris pertama teks di dalam Container sehingga memungkinkan Anda untuk menambahkan padding = 8. */
               Container(
-                padding: const EdgeInsets.only(bottom: 8.0), // padding = 8
+                padding: const EdgeInsets.only(bottom: 8.0),
                 child: const Text(
                   'Wisata Gunung di Batu',
                   style: TextStyle(
@@ -26,22 +22,20 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
+              const Text(
                 'Batu, Malang, Indonesia',
-                style: const TextStyle(
-                  // soal 2: set warna menjadi abu-abu
+                style: TextStyle(
                   color: Colors.grey,
                 ),
               ),
             ],
           ),
         ),
-        /* soal 3: Dua item terakhir di baris judul adalah ikon bintang, set dengan warna merah, dan teks "41". */
         Icon(
-          Icons.star, // Ikon bintang
-          color: Colors.red[500], // set dengan warna merah
+          Icons.star,
+          color: Colors.red[500],
         ),
-        const Text('41'), // teks "41"
+        const Text('41'),
       ],
     ),
   );
@@ -54,13 +48,34 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter layout demo'),
         ),
-        // Ganti isi body text 'Hello World' dengan variabel titleSection
         body: Column(
           children: [
             titleSection,
           ],
         ),
       ),
+    );
+  }
+
+  // --- Method _buildButtonColumn 
+  Column _buildButtonColumn(Color color, IconData icon, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(icon, color: color),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
